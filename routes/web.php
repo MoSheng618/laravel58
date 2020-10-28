@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('test',function(){
+    \Illuminate\Support\Facades\Session::put("name",'xiaoming');
+  return response("ceshi")->cookie('name','xiaoming',10);
+});
